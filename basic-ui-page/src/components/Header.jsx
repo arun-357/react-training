@@ -29,14 +29,10 @@ export function CoreConcepts({title, image, description}) {
       )
 }
 
-export function TabButton ({children}) {
-      function handleClick() {
-            console.log('Awesome')
-      }
-
+export function TabButton ({children, onSelect, isSelected}) {
       return (
       <li>
-            <button onClick={handleClick}>{children}</button>
+            <button className={isSelected ? 'active': undefined} onClick={onSelect}>{children}</button>
       </li>
       )
 }
